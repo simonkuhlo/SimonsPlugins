@@ -6,4 +6,4 @@ class_name ActionSlot
 		pass
 
 @export var trigger:StringName
-@export var owning_entity:Node
+@export var owning_entity:GameEntity

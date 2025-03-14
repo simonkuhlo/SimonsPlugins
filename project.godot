@@ -16,4 +16,4 @@ config/icon="res://icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/simonsentitystats/plugin.cfg", "res://addons/simonsexpressions/plugin.cfg", "res://addons/simonsobtainableresources/plugin.cfg", "res://addons/simonsplayeractions/plugin.cfg", "res://addons/simonsstatechart/plugin.cfg")
+enabled=PackedStringArray("res://addons/simonsentitystats/plugin.cfg", "res://addons/simonsexpressions/plugin.cfg", "res://addons/simonsgameentities/plugin.cfg", "res://addons/simonsobtainableresources/plugin.cfg", "res://addons/simonsplayeractions/plugin.cfg", "res://addons/simonsstatechart/plugin.cfg")
