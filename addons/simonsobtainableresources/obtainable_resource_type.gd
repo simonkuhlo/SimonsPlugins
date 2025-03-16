@@ -1,4 +1,4 @@
 extends Resource
 class_name ObtainableResourceType
 
-@export var name:StringName
+@export var type_name:StringName

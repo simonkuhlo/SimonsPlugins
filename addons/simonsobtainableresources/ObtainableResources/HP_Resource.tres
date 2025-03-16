@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ObtainableResource" load_steps=3 format=3 uid="uid://de0dd8lod1p3c"]
+
+[ext_resource type="Script" uid="uid://blu7mlpcekuyc" path="res://addons/simonsobtainableresources/obtainable_resource.gd" id="1_7b11d"]
+[ext_resource type="Resource" uid="uid://bdxocijmk626n" path="res://addons/simonsobtainableresources/ObtainableResources/HP_ResourceType.tres" id="2_3k4yi"]
+
+[resource]
+script = ExtResource("1_7b11d")
+type = ExtResource("2_3k4yi")
+min_value = 0.0
+max_value = 10.0
+default_value = 10.0
+regen_per_second = 0.0
+metadata/_custom_type_script = "uid://blu7mlpcekuyc"

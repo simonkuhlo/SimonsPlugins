@@ -1,0 +1,40 @@
+[gd_scene load_steps=9 format=3 uid="uid://brirgbceu327g"]
+
+[ext_resource type="Script" uid="uid://delpmurwl327s" path="res://addons/simonsgameentities/game_entity.gd" id="1_lnt8m"]
+[ext_resource type="Resource" uid="uid://coanbmtn5silm" path="res://addons/simonsobtainableresources/ObtainableResources/StandardPlayerResources.tres" id="2_lnt8m"]
+[ext_resource type="Script" uid="uid://b4h313ns2jr4l" path="res://addons/simonsgameentities/stat_resource.gd" id="2_y7puh"]
+[ext_resource type="Resource" uid="uid://bxmoqy71775u4" path="res://addons/simonsplayeractions/Actions/jump_action.tres" id="5_74ehp"]
+[ext_resource type="Script" uid="uid://3gatorx58jvg" path="res://addons/simonsplayeractions/action_slot.gd" id="6_abjwf"]
+
+[sub_resource type="Resource" id="Resource_2cnot"]
+script = ExtResource("2_y7puh")
+min_value = 1.0
+max_value = 100.0
+base_value = 7.0
+
+[sub_resource type="Resource" id="Resource_74ehp"]
+script = ExtResource("2_y7puh")
+min_value = 0.0
+max_value = 100.0
+base_value = 3.0
+
+[sub_resource type="Resource" id="Resource_abjwf"]
+script = ExtResource("2_y7puh")
+min_value = 0.0
+max_value = 100.0
+base_value = 1.0
+
+[node name="GameEntity" type="Node"]
+script = ExtResource("1_lnt8m")
+resources = ExtResource("2_lnt8m")
+move_speed = SubResource("Resource_2cnot")
+jump_strength = SubResource("Resource_74ehp")
+base_damage = SubResource("Resource_abjwf")
+metadata/_custom_type_script = "uid://delpmurwl327s"
+
+[node name="ActionSlot" type="Node" parent="." node_paths=PackedStringArray("owning_entity")]
+script = ExtResource("6_abjwf")
+current_action = ExtResource("5_74ehp")
+trigger = &"skill_1"
+owning_entity = NodePath("..")
+metadata/_custom_type_script = "uid://3gatorx58jvg"

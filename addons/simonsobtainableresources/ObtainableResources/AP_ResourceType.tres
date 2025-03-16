@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_ohfrx")
-name = &"AP"
+type_name = &"AP"

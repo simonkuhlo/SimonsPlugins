@@ -4,4 +4,4 @@
 
 [resource]
 script = ExtResource("1_c2jbv")
-name = &"HP"
+type_name = &"HP"

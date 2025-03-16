@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ObtainableResourcesHolder" load_steps=5 format=3 uid="uid://coanbmtn5silm"]
+
+[ext_resource type="Script" uid="uid://blu7mlpcekuyc" path="res://addons/simonsobtainableresources/obtainable_resource.gd" id="1_8ceyy"]
+[ext_resource type="Resource" uid="uid://de0dd8lod1p3c" path="res://addons/simonsobtainableresources/ObtainableResources/HP_Resource.tres" id="2_7aop4"]
+[ext_resource type="Script" uid="uid://dpuwj6uttbvdb" path="res://addons/simonsobtainableresources/obtainable_resource_holder.gd" id="2_dho42"]
+[ext_resource type="Resource" uid="uid://c5o3aqerlbm3h" path="res://addons/simonsobtainableresources/ObtainableResources/AP_Resource.tres" id="3_pk50q"]
+
+[resource]
+script = ExtResource("2_dho42")
+held_resources = Array[ExtResource("1_8ceyy")]([ExtResource("2_7aop4"), ExtResource("3_pk50q")])
+metadata/_custom_type_script = "uid://dpuwj6uttbvdb"

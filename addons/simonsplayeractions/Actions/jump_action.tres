@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ActionJump" load_steps=2 format=3 uid="uid://bxmoqy71775u4"]
+
+[ext_resource type="Script" uid="uid://dlp0yycunnei" path="res://addons/simonsplayeractions/Actions/jump_action.gd" id="1_6hl78"]
+
+[resource]
+script = ExtResource("1_6hl78")
+cooldown_time = 1.0
+prepare_time = 0.0
+casting_costs = []
+metadata/_custom_type_script = "uid://dlp0yycunnei"
