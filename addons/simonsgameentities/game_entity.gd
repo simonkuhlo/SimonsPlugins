@@ -4,6 +4,7 @@ class_name GameEntity
 
 
 @export var resources:ObtainableResourcesHolder = ObtainableResourcesHolder.new()
+@export var inventory:EntityInventory = EntityInventory.new()
 
 @export_group("Stats")
 @export_group("Stats/Movement")
