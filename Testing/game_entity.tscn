@@ -1,10 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://brirgbceu327g"]
+[gd_scene load_steps=13 format=3 uid="uid://brirgbceu327g"]
 
 [ext_resource type="Script" uid="uid://delpmurwl327s" path="res://addons/simonsgameentities/game_entity.gd" id="1_lnt8m"]
-[ext_resource type="Resource" uid="uid://coanbmtn5silm" path="res://addons/simonsobtainableresources/ObtainableResources/StandardPlayerResources.tres" id="2_lnt8m"]
+[ext_resource type="Resource" uid="uid://coanbmtn5silm" path="res://addons/simonsobtainableresources/ObtainableResources/StandardPlayerResources.tres" id="2_nn6lm"]
 [ext_resource type="Script" uid="uid://b4h313ns2jr4l" path="res://addons/simonsgameentities/stat_resource.gd" id="2_y7puh"]
+[ext_resource type="Script" uid="uid://dykhwlen8ieyc" path="res://addons/simonsentityinventory/inventory.gd" id="3_abjwf"]
 [ext_resource type="Resource" uid="uid://bxmoqy71775u4" path="res://addons/simonsplayeractions/Actions/jump_action.tres" id="5_74ehp"]
 [ext_resource type="Script" uid="uid://3gatorx58jvg" path="res://addons/simonsplayeractions/action_slot.gd" id="6_abjwf"]
+[ext_resource type="Script" uid="uid://be7ytapgtlvus" path="res://Testing/action_state_display.gd" id="7_nn6lm"]
+[ext_resource type="Script" uid="uid://bvi43ue5qvtrt" path="res://Testing/player_resurces_display.gd" id="9_3p6vn"]
+
+[sub_resource type="Resource" id="Resource_nn6lm"]
+script = ExtResource("3_abjwf")
 
 [sub_resource type="Resource" id="Resource_2cnot"]
 script = ExtResource("2_y7puh")
@@ -26,7 +32,8 @@ base_value = 1.0
 
 [node name="GameEntity" type="Node"]
 script = ExtResource("1_lnt8m")
-resources = ExtResource("2_lnt8m")
+resources = ExtResource("2_nn6lm")
+inventory = SubResource("Resource_nn6lm")
 move_speed = SubResource("Resource_2cnot")
 jump_strength = SubResource("Resource_74ehp")
 base_damage = SubResource("Resource_abjwf")
@@ -38,3 +45,22 @@ current_action = ExtResource("5_74ehp")
 trigger = &"skill_1"
 owning_entity = NodePath("..")
 metadata/_custom_type_script = "uid://3gatorx58jvg"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ActionSlotState" type="Label" parent="CanvasLayer" node_paths=PackedStringArray("slot_to_watch")]
+offset_right = 186.0
+offset_bottom = 57.0
+script = ExtResource("7_nn6lm")
+slot_to_watch = NodePath("../../ActionSlot")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" node_paths=PackedStringArray("entity_to_watch")]
+anchors_preset = -1
+anchor_left = 0.826
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.447937
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("9_3p6vn")
+entity_to_watch = NodePath("../..")

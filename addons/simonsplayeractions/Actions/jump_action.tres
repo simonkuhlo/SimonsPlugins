@@ -1,10 +1,18 @@
-[gd_resource type="Resource" script_class="ActionJump" load_steps=2 format=3 uid="uid://bxmoqy71775u4"]
+[gd_resource type="Resource" script_class="ActionJump" load_steps=5 format=3 uid="uid://bxmoqy71775u4"]
 
 [ext_resource type="Script" uid="uid://dlp0yycunnei" path="res://addons/simonsplayeractions/Actions/jump_action.gd" id="1_6hl78"]
+[ext_resource type="Script" uid="uid://bjljdndfuares" path="res://addons/simonsobtainableresources/obtainable_resource_cost.gd" id="1_e2mf3"]
+[ext_resource type="Resource" uid="uid://bc7nnpl84kpnm" path="res://addons/simonsobtainableresources/ObtainableResources/AP_ResourceType.tres" id="2_cr1nw"]
+
+[sub_resource type="Resource" id="Resource_250be"]
+script = ExtResource("1_e2mf3")
+type = ExtResource("2_cr1nw")
+amount = 2.0
+metadata/_custom_type_script = "uid://bjljdndfuares"
 
 [resource]
 script = ExtResource("1_6hl78")
 cooldown_time = 1.0
 prepare_time = 0.0
-casting_costs = []
+casting_costs = Array[ExtResource("1_e2mf3")]([SubResource("Resource_250be")])
 metadata/_custom_type_script = "uid://dlp0yycunnei"

@@ -40,14 +40,14 @@ signal value_changed
 @export var regen_per_second:float = 0
 var current_value:float = default_value:
 	set(new_value):
-		current_value = round(clampf(new_value, min_value, max_value)*100) / 100
+		current_value = clampf(new_value, min_value, max_value)
 		if current_value == max_value:
 			max_value_reached.emit()
 		if new_value == min_value:
 			min_value_reached.emit()
 		value_changed.emit()
 
-func regenerate(delta):
+func regenerate(delta:float):
 	if current_value < max_value:
 		current_value += regen_per_second * delta
 

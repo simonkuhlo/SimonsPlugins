@@ -9,5 +9,5 @@ type = ExtResource("2_on6q0")
 min_value = 0.0
 max_value = 10.0
 default_value = 1.0
-regen_per_second = 0.0
+regen_per_second = 0.3
 metadata/_custom_type_script = "uid://blu7mlpcekuyc"

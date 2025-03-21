@@ -1,12 +1,12 @@
 extends Node
 class_name ActionStateMachine
 
-var ready_state:ActionState = ActionState.new()
-var preparing_state:ActionState = ActionState.new()
-var casting_state:ActionState = ActionState.new()
-var cooldown_state:ActionState = ActionState.new()
-var missing_resource_state:ActionState = ActionState.new()
-var blocked_state:ActionState = ActionState.new()
+var ready_state:ActionState = ActionState.new("Ready")
+var preparing_state:ActionState = ActionState.new("Preparing")
+var casting_state:ActionState = ActionState.new("Casting")
+var cooldown_state:ActionState = ActionState.new("On_Cooldown")
+var missing_resource_state:ActionState = ActionState.new("Missing_Resource")
+var blocked_state:ActionState = ActionState.new("Blocked")
 
 var current_state:ActionState = ready_state:
 	set(new_state):

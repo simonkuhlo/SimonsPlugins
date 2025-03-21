@@ -9,7 +9,7 @@ class_name ActionResource
 	set(new_time):
 		prepare_time = new_time
 
-@export var casting_costs:Array = []
+@export var casting_costs:Array[ObtainableResourceCost] = []
 
 var _node_instance:ActionNode = ActionNode.new():
 	set(new_node_instance):
